@@ -3,25 +3,27 @@ About r-vgam
 
 Home: https://www.stat.auckland.ac.nz/~yee/VGAM
 
-Package license: GPL-2 | GPL-3
+Package license: GPL-3
 
 Feedstock license: BSD 3-Clause
 
-Summary: An implementation of about 6 major classes of statistical regression models. At the heart of it are the vector generalized linear and additive model (VGLM/VGAM) classes, and the book "Vector Generalized Linear and Additive Models: With an Implementation in R" (Yee, 2015) <DOI:10.1007/978-1-4939-2818-7> gives details of the statistical framework and VGAM package. Currently only fixed-effects models are implemented, i.e., no random-effects models. Many (150+) models and distributions are estimated by maximum likelihood estimation (MLE) or penalized MLE, using Fisher scoring. VGLMs can be loosely thought of as multivariate GLMs. VGAMs are data-driven VGLMs (i.e., with smoothing). The other classes are RR-VGLMs (reduced-rank VGLMs), quadratic RR-VGLMs, reduced-rank VGAMs, RCIMs (row-column interaction models)---these classes perform constrained and unconstrained quadratic ordination (CQO/UQO) models in ecology, as well as constrained additive ordination (CAO). Note that these functions are subject to change; see the NEWS and ChangeLog files for latest changes.
+Summary: An implementation of about 6 major classes of statistical regression models. The central algorithm is Fisher scoring and iterative reweighted least squares. At the heart of this package are the vector generalized linear and additive model (VGLM/VGAM) classes. VGLMs can be loosely thought of as multivariate GLMs. VGAMs are data-driven VGLMs that use smoothing. The book "Vector Generalized Linear and Additive Models: With an Implementation in R" (Yee, 2015) <DOI:10.1007/978-1-4939-2818-7> gives details of the statistical framework and the package. Currently only fixed-effects models are implemented. Many (150+) models and distributions are estimated by maximum likelihood estimation (MLE) or penalized MLE. The other classes are RR-VGLMs (reduced-rank VGLMs), quadratic RR-VGLMs, reduced-rank VGAMs, RCIMs (row-column interaction models)---these classes perform constrained and unconstrained quadratic ordination (CQO/UQO) models in ecology, as well as constrained additive ordination (CAO). Note that these functions are subject to change; see the NEWS and ChangeLog files for latest changes.
 
 
 
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-vgam-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-vgam-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-vgam-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-vgam-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/r-vgam-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/r-vgam-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-vgam-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-vgam-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-vgam-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-vgam-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-vgam-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-vgam-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-vgam/badges/version.svg)](https://anaconda.org/conda-forge/r-vgam)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-vgam/badges/downloads.svg)](https://anaconda.org/conda-forge/r-vgam)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--vgam-green.svg)](https://anaconda.org/conda-forge/r-vgam) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-vgam.svg)](https://anaconda.org/conda-forge/r-vgam) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-vgam.svg)](https://anaconda.org/conda-forge/r-vgam) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-vgam.svg)](https://anaconda.org/conda-forge/r-vgam) |
 
 Installing r-vgam
 =================
@@ -56,16 +58,17 @@ for each of the installable packages. Such a repository is known as a *feedstock
 A feedstock is made up of a conda recipe (the instructions on what and how to build
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
-[CircleCI](https://circleci.com/), [AppVeyor](http://www.appveyor.com/)
+[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/)
 and [TravisCI](https://travis-ci.org/) it is possible to build and upload installable
 packages to the [conda-forge](https://anaconda.org/conda-forge)
-[Anaconda-Cloud](http://docs.anaconda.org/) channel for Linux, Windows and OSX respectively.
+[Anaconda-Cloud](https://anaconda.org/) channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
-[conda-smithy](http://github.com/conda-forge/conda-smithy) has been developed.
+[conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
@@ -97,7 +100,7 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](http://conda.pydata.org/docs/building/meta-yaml.html#build-number-and-string).
+   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](http://conda.pydata.org/docs/building/meta-yaml.html#build-number-and-string)
+   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
    back to 0.
