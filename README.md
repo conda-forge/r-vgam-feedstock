@@ -3,7 +3,7 @@ About r-vgam
 
 Home: https://www.stat.auckland.ac.nz/~yee/VGAM
 
-Package license: GPL-3
+Package license: GPL-3.0-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-vgam-feedstock/blob/master/LICENSE.txt)
 
