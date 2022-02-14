@@ -1,4 +1,4 @@
-{% set version = "1.1-5" %}
+{% set version = "1.1-6" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/VGAM_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/VGAM/VGAM_{{ version }}.tar.gz
-  sha256: 30190b150f3e5478137d288a45f575b2654ad7c29254b0a1fe5c954ee010a1bb
+  sha256: 446a61bac5dd4794e05d20c2f3901eec54afac52c6e23ce2787c5575170dd417
 
 build:
   merge_build_host: true  # [win]
