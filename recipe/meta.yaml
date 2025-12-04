@@ -1,4 +1,4 @@
-{% set version = "1.1-13" %}
+{% set version = "1.1-14" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/VGAM_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/VGAM/VGAM_{{ version }}.tar.gz
-  sha256: be388d62db6974fae5bb428af5fdf2b51d9aae9cd5e6f7b4d5401937b35a119f
+  sha256: 87820cf3141ecb5d16e1f9b16df6fa97358abcb9df063fd4673ab33c6983248f
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
